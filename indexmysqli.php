@@ -11,12 +11,8 @@ require_once(SMARTY_DIR . 'Smarty.class.php');
 require_once ('./models/Database.php');
 require_once ('./models/Tree.php');
 
-$param = [
-    'host'=> 'localhost',
-    'user'=> 'root',
-    'password' => '',
-    'database' => 'holbi',
-    'language' => 1,
-    'type' => 'pdo'
-];
+require_once ('./conf/param.php');
+
+$param = array_merge($param,array('type'=>'mysqli'));
+
 echo Tree::getInstance($param)->getTree(0);
