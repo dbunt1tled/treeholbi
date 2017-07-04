@@ -37,8 +37,6 @@ class Tree {
         $this->smarty->config_dir = str_replace("\\", "/", getcwd()).'/views/configs/';
         $this->smarty->cache_dir = str_replace("\\", "/", getcwd()).'/views/cache/';
 
-        $this->smarty->assign('name', 'Катруська');
-
     }
 
     protected function getItemsArraymysqli(){
